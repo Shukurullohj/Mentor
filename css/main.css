@@ -157,7 +157,7 @@ button:active {
 .delete_btn:hover {
     background: #E98888;
 }
-.feed_box .cancel_btn {
+.edit_feed-box .cancel_btn {
     display: block;
     width: 100%;
     text-align: center;
@@ -179,7 +179,7 @@ button:active {
     background: #4661E6;
 }
 .catagory_btn {
-    margin: 24px 0;
+    margin: 8px 0;
 }
 
 
@@ -280,6 +280,9 @@ button:active {
     display: inline-block;
     margin-right: 16px;
 }
+.none {
+    display: none;
+}
 
 
 /* dropdown */
@@ -348,6 +351,31 @@ button:active {
 
 /* edit create page */
 
+.edit_feed-box {
+    margin: 24px;
+    position: relative;
+}
+
+.circle_icon {
+    position: absolute;
+    top: -2%;
+    left: 24px;
+    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit_feed-box h5 {
+    margin-top: 24px;
+}
+.edit_feed-box .btn {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
 .edit_create-wrapper .selected {
     color: var(--clr-dark);  
 } 
@@ -379,7 +407,10 @@ button:active {
 .roadmap_wrapper section {
     padding: 24px;
 }
-
+.roadmap_box .box {
+    margin-top: 24px;
+    border-top: solid 6px var(--clr-pink);
+}
 .roadmap_head {
     background-color: var(--clr-darkblue);
 }
@@ -404,8 +435,9 @@ button:active {
     align-items: center;
 }
 
+/* Empty Feed  */
 
-.add_feed {
+.empty_feed {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -414,20 +446,21 @@ button:active {
     background: var(--clr-white);
     border-radius: 10px;
 }
-
-.add_feed h5 {
+.empty_feed h5 {
     color: var(--clr-dark);
 }
-.add_feed .add_feed-btn {
-    padding: 10.5px 17px;
-}
-.add_feed img {
+
+.empty_feed img {
     padding-bottom: 69px;
 }
-
-.none {
-    display: none;
+.empty_feed-btn {
+    padding: 10.5px 16px;
 }
+.text {
+    margin: 16px 0;
+}
+
+/* Feedback Detials */
 
 .user {
     justify-content: space-between;
@@ -453,42 +486,11 @@ hr {
     color: var(--clr-pink);
     font-weight: var(--fw-lg);
 }
-
-
-
-
 .comment_write .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.feed_box {
-    margin: 24px;
-    position: relative;
-}
-
-.circle_icon {
-    position: absolute;
-    top: -2%;
-    left: 24px;
-    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.feed_box h5 {
-    margin-top: 24px;
-}
-.feed_box .btn {
-    width: 100%;
-    margin-bottom: 24px;
-}
-
-
 .status {
     width: 100%;
     justify-content: space-around;
@@ -521,11 +523,7 @@ hr {
     color: var(--clr-dark);
 }
 
-.roadmap_box .box {
-    margin-top: 24px;
 
-    border-top: solid 6px var(--clr-pink);
-}
 @media screen and (min-width: 640px) {
    
     h2 {
@@ -596,19 +594,19 @@ hr {
     .comment_box .comment {
         margin: auto;
     }
-    .feed_box h2 {
+    .edit_feed-box h2 {
         margin: 30px;
     }
-    .feed_box footer {
+    .edit_feed-box footer {
         display: flex;
         justify-content: end; 
         flex-direction: row-reverse;
     }
-    .feed_box .btn {
+    .edit_feed-box .btn {
         width: auto;
         margin-bottom: 24px;
     }
-    .feed_box .cancel_btn {
+    .edit_feed-box .cancel_btn {
         width: auto;
         display: inline;
     } 
@@ -628,8 +626,8 @@ hr {
         font-size: 15px;
         background-color: transparent;
     }
-    .status a:hover {
-            border-bottom: none;
+    .status .status_head:hover {
+        border-bottom: none
     }
     .status span {
         display: inline;
