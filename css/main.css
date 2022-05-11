@@ -12,10 +12,11 @@
     --clr-gray: #F2F2F2;
     --clr-light: #647196;
     --clr-pink: #AD1FEA;
+    --clr-lightpink : #C75AF6;
     --clr-darkblue: #373F68;
     --clr-lightblue: #62BCFA;
     --clr-orange: #F49F85;
-
+    --clr-active_btn : #4661E6;
 
 
     --fs-xl: 15px;
@@ -100,13 +101,13 @@ textarea {
     margin-bottom: 16px;
 }
 .orange {
-    background: #F49F85;
+    background: var(--clr-orange);
 }
 .pink {
     background: var(--clr-pink);
 }
 .blue {
-    background: #62BCFA;
+    background: var(--clr-lightblue);
 }
 
 /* All Buttons */
@@ -127,16 +128,16 @@ button:hover {
     background: #CFD7FF;
 }
 button:active {
-    background: #4661E6;
+    background: var(--clr-active_btn);
 }
 .btn{
-    background: #AD1FEA;
+    background: var(--clr-pink);
     padding: 10.5px 16px;
     color: var(--clr-white);
     border-radius: 10px;
 }
 .btn:hover {
-    background: #C75AF6;
+    background: var(--clr-lightpink);
 }
 .edit_btn {
     background: var(--clr-primary);
@@ -176,7 +177,7 @@ button:active {
     background: #CFD7FF;
 }
 #navbar .btn:active {
-    background: #4661E6;
+    background: var(--clr-active_btn);
 }
 .catagory_btn {
     margin: 8px 0;
@@ -248,14 +249,14 @@ button:active {
     display: flex;
     justify-content: end;
 }
-.comment_box {
+.feed_box {
     display: grid;
     grid-template-columns: repeat(auto);
     grid-template-areas: 
     "head head"
     "num comment";
 }
-.comment_head {
+.feed_head{
     grid-area: head;
 }
 .comment i {
@@ -283,6 +284,8 @@ button:active {
 .none {
     display: none;
 }
+
+
 
 
 /* dropdown */
@@ -404,12 +407,18 @@ button:active {
 /* Roadmap　Page */
 
 
-.roadmap_wrapper section {
-    padding: 24px;
-}
+
 .roadmap_box .box {
     margin-top: 24px;
     border-top: solid 6px var(--clr-pink);
+}
+.status_box .live_line {
+    border-top: solid 6px var(--clr-lightblue) ;
+    display: block;
+}
+.status_box .planned_line {
+    border-top: solid 6px var(--clr-orange);
+    display: block;
 }
 .roadmap_head {
     background-color: var(--clr-darkblue);
@@ -522,7 +531,15 @@ hr {
     font-weight: var(--fw-xl);
     color: var(--clr-dark);
 }
-
+.status_box {
+    display: none;
+}
+.active {
+    display: block;
+}
+.d_none {
+    display: none;
+}
 
 @media screen and (min-width: 640px) {
    
@@ -580,18 +597,18 @@ hr {
         margin: auto;
         margin-top: 56px;
     }
-    .comment_box {
+    .feed_box {
         grid-template-areas: 
         "num head comment";
     }
-    .comment_box .comment_num {
+    .feed_box .comment_num {
         margin-right: 40px;
 
     }
-    .comment_box .number{
+    .feed_box .number{
         display: block;
     }
-    .comment_box .comment {
+    .feed_box .comment {
         margin: auto;
     }
     .edit_feed-box h2 {
@@ -639,15 +656,8 @@ hr {
         display: flex;
     }
     .status_box {
+        display: block;
         margin: 0 10px;
-    }
-    .status_box .live_line {
-        border-top: solid 6px var(--clr-lightblue) ;
-        display: block;
-    }
-    .status_box .planned_line {
-        border-top: solid 6px var(--clr-orange);
-        display: block;
     }
     .roadmap_wrapper {
         padding: 56px 40px;
